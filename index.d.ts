@@ -4,6 +4,7 @@ export const cart: {
   list(): Item[];
   get(id: number | string): Item | undefined;
   add(item: Item): void;
+  updateQuantity(id: number | string, quantity: number): void;
   remove(id: number | string): void;
   exists(id: number | string): boolean;
   total(): number;

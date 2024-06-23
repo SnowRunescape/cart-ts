@@ -23,7 +23,7 @@ export const cart = {
     storage.set(CART_LOCALSTORAGE_KEY, cart);
   },
 
-  updateQuantity(id: number | string, quantity: number) {
+  updateQuantity(id: number | string, quantity: number): void {
     const items = this.list();
     const itemIndex = items.findIndex((item: Item) => item.id === id);
 
