@@ -12,7 +12,7 @@
     "build": "tsc && tsc-alias",
     "webpack-build": "webpack",
     "test": "jest --coverage",
-    "package-release": "npm run build && npm publish"
+    "package-release": "npm run build && npm run test && npm publish"
   },
   "files": [
     "build",
