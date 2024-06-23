@@ -23,6 +23,16 @@ export const cart = {
     storage.set(CART_LOCALSTORAGE_KEY, cart);
   },
 
+  updateQuantity(id: number | string, quantity: number) {
+    const items = this.list();
+    const itemIndex = items.findIndex((item: any) => item.id === id);
+
+    if (itemIndex !== -1) {
+      items[itemIndex].quantity = quantity;
+      storage.set(CART_LOCALSTORAGE_KEY, cart);
+    }
+  },
+
   remove(id: number | string) {
     const cart = this.list().filter((item: Item) => item.id !== id);
 
