@@ -48,6 +48,16 @@ describe('cart', () => {
     expect(storedItems).toEqual([item]);
   });
 
+  test('should update quantity', () => {
+    const item: Item = { id: 1, name: 'item1', price: 100, quantity: 1 };
+
+    cart.add(item);
+    cart.updateQuantity(1, 15);
+
+    const result = cart.get(1);
+    expect(result?.quantity).toEqual(15);
+  });
+
   test('should remove item from localStorage by id', () => {
     cart.add({ id: 1, name: 'item1', price: 100, quantity: 1 });
     cart.add({ id: 2, name: 'item2', price: 200, quantity: 2 });

@@ -7,8 +7,8 @@ export const cart = {
     return storage.get(CART_LOCALSTORAGE_KEY) || [];
   },
 
-  get(id: number | string) {
-    return this.list().find((item: any) => item.id === id);
+  get(id: number | string): Item | undefined {
+    return this.list().find((item: Item) => item.id === id);
   },
 
   add(item: Item) {
@@ -25,11 +25,11 @@ export const cart = {
 
   updateQuantity(id: number | string, quantity: number) {
     const items = this.list();
-    const itemIndex = items.findIndex((item: any) => item.id === id);
+    const itemIndex = items.findIndex((item: Item) => item.id === id);
 
     if (itemIndex !== -1) {
       items[itemIndex].quantity = quantity;
-      storage.set(CART_LOCALSTORAGE_KEY, cart);
+      storage.set(CART_LOCALSTORAGE_KEY, items);
     }
   },
 
