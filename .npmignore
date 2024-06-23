@@ -1,0 +1,8 @@
+node_modules
+tests
+.github
+.vscode
+
+.editorconfig
+jest.config.cjs
+jest.setup.js
