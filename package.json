@@ -8,9 +8,6 @@
     "type": "git",
     "url": "https://github.com/SnowRunescape/cart-ts"
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/SnowRunescape"
-  },
   "scripts": {
     "build": "tsc && tsc-alias",
     "webpack-build": "webpack",
