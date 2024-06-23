@@ -1,1 +1,1 @@
-export const CART_LOCALSTORAGE_KEY = process.env.LOCAL_STORAGE_KEY ?? "DEFAULT_LOCAL_STORAGE_KEY";
+export const CART_LOCALSTORAGE_KEY = "cart-ts";
