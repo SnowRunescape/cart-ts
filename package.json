@@ -1,15 +1,26 @@
 {
   "name": "cart-ts",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "build/index.js",
   "types": "index.d.ts",
-  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SnowRunescape/cart-ts"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/SnowRunescape"
+  },
   "scripts": {
     "build": "tsc && tsc-alias",
     "webpack-build": "webpack",
     "test": "jest --coverage",
     "package-release": "npm run build && npm publish"
   },
+  "files": [
+    "build",
+    "index.d.ts"
+  ],
   "devDependencies": {
     "@types/jest": "^29.5.12",
     "@types/node": "^20.14.8",
